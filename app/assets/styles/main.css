@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   Design System (Tailwind v4 theme tokens)
+   Tokens are exposed both as Tailwind utilities (bg-surface, p-md, rounded-lg)
+   and as plain CSS variables (var(--color-surface), var(--spacing-md)).
+   ========================================================================== */
+@theme {
+  /* ============================================
+     Colors — Base
+     ============================================ */
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-info: #3b82f6;
+  --color-purple: #a855f7;
+  --color-success: #22c55e;
+  --color-warning: #fbbf24;
+  --color-danger: #ef4444;
+
+  /* ============================================
+     Colors — Surfaces
+     ============================================ */
+  --color-background: #ffffff;
+  --color-background-hover: #f4f5f7;
+  --color-surface: #fafafa;
+  --color-surface-alt: #f2f3f5;
+  --color-sidebar: #111111;
+
+  /* ============================================
+     Colors — Text
+     ============================================ */
+  --color-text-primary: #111827;
+  --color-text-secondary: #4b5563;
+  --color-text-tertiary: #9ca3af;
+  --color-placeholder: #9ca3af;
+
+  /* ============================================
+     Colors — Borders
+     ============================================ */
+  --color-border: #e5e7eb;
+  --color-divider: #f0f1f3;
+
+  /* ============================================
+     Spacing
+     ============================================ */
+  --spacing-3xs: 3px;
+  --spacing-2xs: 5px;
+  --spacing-xs: 9px;
+  --spacing-sm: 13px;
+  --spacing-base: 18px;
+  --spacing-md: 22px;
+  --spacing-lg: 26px;
+  --spacing-xl: 35px;
+  --spacing-2xl: 44px;
+  --spacing-3xl: 53px;
+  --spacing-4xl: 62px;
+  --spacing-5xl: 79px;
+
+  /* ============================================
+     Border Radius
+     ============================================ */
+  --radius-2xs: 5px;
+  --radius-xs: 7px;
+  --radius-sm: 9px;
+  --radius-md: 11px;
+  --radius-lg: 13px;
+  --radius-xl: 15px;
+  --radius-2xl: 18px;
+  --radius-3xl: 22px;
+
+  /* ============================================
+     Containers
+     ============================================ */
+  --container-xs: 308px;
+  --container-sm: 396px;
+  --container-md: 506px;
+  --container-lg: 704px;
+  --container-xl: 880px;
+
+  /* ============================================
+     Input Heights
+     ============================================ */
+  --height-input-sm: 35px;
+  --height-input-md: 44px;
+  --height-input-lg: 53px;
+}
+
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+@layer base {
+  html,
+  body,
+  #__nuxt {
+    height: 100%;
+  }
+
+  body {
+    background: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: Arial, sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* ==========================================================================
+   Shared Utilities
+   ========================================================================== */
+@utility app-container {
+  margin-inline: auto;
+  max-width: var(--container-xl);
+  padding: var(--spacing-lg);
+}
+
+@utility app-link {
+  color: var(--color-primary);
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+  }
+}
