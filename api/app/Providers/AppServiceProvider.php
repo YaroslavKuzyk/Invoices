@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Contracts\InvoiceServiceInterface;
+use App\Services\InvoiceService;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -15,7 +17,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind(InvoiceServiceInterface::class, InvoiceService::class);
     }
 
     /**
