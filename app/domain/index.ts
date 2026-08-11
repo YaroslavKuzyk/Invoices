@@ -1,4 +1,1 @@
-export enum EUserType {
-  CUSTOMER = 'CUSTOMER',
-  ADMIN = 'ADMIN',
-}
+export * from './api.types'
