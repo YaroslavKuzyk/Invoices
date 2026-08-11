@@ -5,7 +5,6 @@ export default defineNuxtPlugin(() => {
 
   const api = $fetch.create({
     baseURL: config.public.apiBase as string,
-    credentials: import.meta.client ? 'include' : undefined,
 
     onRequest({ options }) {
       options.headers = new Headers(options.headers)

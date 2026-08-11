@@ -18,6 +18,14 @@
   --color-danger: #ef4444;
 
   /* ============================================
+     Colors — Soft backgrounds (badges, alerts)
+     ============================================ */
+  --color-primary-bg: #eff6ff;
+  --color-success-bg: #f0fdf4;
+  --color-warning-bg: #fffbeb;
+  --color-danger-bg: #fef2f2;
+
+  /* ============================================
      Colors — Surfaces
      ============================================ */
   --color-background: #ffffff;

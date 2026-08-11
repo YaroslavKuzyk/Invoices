@@ -1,15 +1,14 @@
 <template>
-  <span
-    class="app-loader inline-block animate-spin rounded-full border-2 border-current border-t-transparent"
-    :style="{ width: `${props.size}px`, height: `${props.size}px`, color: props.color }"
-  />
+  <div
+    class="flex items-center justify-center py-2xl text-text-tertiary"
+    role="status"
+    aria-live="polite"
+  >
+    <LoaderCircle class="size-6 animate-spin" />
+    <span class="sr-only">Loading</span>
+  </div>
 </template>
 
-<script setup lang="ts">
-import type { IProps } from './index.types'
-
-const props = withDefaults(defineProps<IProps>(), {
-  size: 25,
-  color: undefined,
-})
+<script lang="ts" setup>
+import { LoaderCircle } from "lucide-vue-next";
 </script>

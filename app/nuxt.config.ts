@@ -6,18 +6,17 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      apiBase: process.env.API_BASE_URL
+      apiBase: process.env.API_BASE_URL || 'http://localhost/api'
     }
   },
 
   imports: {
     dirs: [
-      'views/*/api',
-      'views/*/stores'
+      'views/*/api'
     ]
   },
 
-  modules: ['@pinia/nuxt', '@nuxt/eslint'],
+  modules: ['@nuxt/eslint'],
 
   components: [
     { path: '~/components/System', pathPrefix: false, ignore: ['**/*.types.ts', '**/*.test.ts'] },
