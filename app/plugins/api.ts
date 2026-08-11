@@ -3,8 +3,10 @@ import type { $Fetch } from 'ofetch'
 export default defineNuxtPlugin(() => {
   const config = useRuntimeConfig()
 
+  const baseURL = (import.meta.server ? config.apiBase : config.public.apiBase) as string
+
   const api = $fetch.create({
-    baseURL: config.public.apiBase as string,
+    baseURL,
 
     onRequest({ options }) {
       options.headers = new Headers(options.headers)
